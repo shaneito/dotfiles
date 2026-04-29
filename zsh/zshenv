@@ -1,0 +1,38 @@
+#!/usr/bin/env zsh
+
+###############################
+#    ENVIRONMENT VARIABLES    #
+###############################
+
+# Dotfiles
+export DOTFILES="$HOME/.dotfiles"
+
+# XDG
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_STATE_HOME="${HOME}/.local/state"
+
+# editor
+export EDITOR="nvim"
+export VISUAL="nvim"
+export DIFFPROG="nvim -d"
+export VIMCONFIG="$XDG_CONFIG_HOME/nvim"
+
+# ZSH
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+
+# Homebrew
+export HOMEBREW_CASK_OPTS="--no-quarantine --no-binaries"
+export HOMEBREW_BUNDLE_FILE="$DOTFILES/brew/Brewfile"
+export HOMEBREW_NO_ENV_HINTS
+
+# Other Misc
+export LOCATE_CONFIG="/etc/locate.users.rc" # Locate Command's Database
+export BAT_CONFIG_PATH="$XDG_CONFIG_HOME/bat/bat.conf"
+export GITHUB_USER="Shaneio"
+export STARSHIP_CONFIG="$DOTFILES/starship/starship.toml"
+export OPENSSL_PREFIX="/usr/local/bin/openssl"
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+export DELTA_FEATURES="diff-so-fancy"
+export KANATA_TRAY_CONFIG_DIR="$XDG_CONFIG_HOME/kanata/kanata-tray.toml"

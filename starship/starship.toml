@@ -1,0 +1,8 @@
+[profiles]
+transient = """
+$character
+"""
+rtransient = """
+$status $cmd_duration $time
+"""
+

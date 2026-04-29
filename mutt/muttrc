@@ -1,0 +1,6 @@
+set use_from
+set from="Shane Patel <shane.patel@me.com>"
+set use_envelope_from
+set envelope_from_address="Shane Patel <shane.patel@me.com>"
+set reply_to
+

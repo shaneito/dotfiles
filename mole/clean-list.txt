@@ -1,0 +1,90 @@
+# Mole Cleanup Preview - 2026-04-28 11:58:57
+#
+# How to protect files:
+# 1. Copy any path below to ~/.config/mole/whitelist
+# 2. Run: mo clean --whitelist
+#
+# Example:
+#   /Users/*/Library/Caches/com.example.app
+#
+
+
+=== System ===
+
+=== User essentials ===
+/Users/shane/Library/Caches  # 12.48GB, 52 items
+/Users/shane/Library/Logs  # 4.7MB, 15 items
+
+=== App caches ===
+/Users/shane/Library/Suggestions  # 10.0MB, 19 items
+/Users/shane/Library/Messages/Caches/Previews/Attachments  # 73.7MB, 18 items
+/Users/shane/Library/Application Support/com.apple.wallpaper/aerials/thumbnails  # 8.0MB, 156 items
+/Users/shane/Library/Caches/com.apple.helpd  # 31.9MB, 9 items
+/Users/shane/Library/Caches/GeoServices  # 109.4MB, 8 items
+
+=== Browsers ===
+/Users/shane/Library/Caches/com.apple.Safari  # 262KB, 2 items
+/Users/shane/Library/Caches/Google/Chrome/Default  # 10.5MB
+/Users/shane/Library/Application Support/Google/Chrome/Default/GPUCache  # 558KB, 5 items
+/Users/shane/Library/Application Support/Google/Chrome/component_crx_cache  # 35.1MB, 18 items
+/Users/shane/Library/Application Support/Google/Chrome/ShaderCache  # 558KB, 5 items
+/Users/shane/Library/Application Support/Google/Chrome/GrShaderCache  # 558KB, 5 items
+/Users/shane/Library/Application Support/Google/Chrome/GraphiteDawnCache  # 6.1MB, 19 items
+/Users/shane/Library/Application Support/Google/Chrome/Default//Service Worker/ScriptCache  # 462KB, 7 items
+/Users/shane/Library/Application Support/Google/GoogleUpdater/crx_cache  # 728.7MB, 3 items
+/Users/shane/Library/Application Support/Google/GoogleUpdater  # 2.1MB, 2 items
+/Users/shane/Library/Caches/company.thebrowser.Browser  # 124KB, 3 items
+/Users/shane/Library/Caches/company.thebrowser.dia  # 145.1MB, 5 items
+/Users/shane/Library/Caches/BraveSoftware/Brave-Browser/Default  # 16KB
+/Users/shane/Library/Application Support/BraveSoftware/Brave-Browser/Default/GPUCache  # 558KB, 5 items
+/Users/shane/Library/Application Support/BraveSoftware/Brave-Browser/component_crx_cache  # 24.5MB, 16 items
+/Users/shane/Library/Application Support/BraveSoftware/Brave-Browser/ShaderCache  # 558KB, 5 items
+/Users/shane/Library/Application Support/BraveSoftware/Brave-Browser/GrShaderCache  # 558KB, 5 items
+/Users/shane/Library/Application Support/BraveSoftware/Brave-Browser/GraphiteDawnCache  # 5.9MB, 8 items
+
+=== Cloud & Office ===
+
+=== Developer tools ===
+/Users/shane/.npm/_cacache  # 29.7MB, 2 items
+/Users/shane/.npm/_logs  # 78KB, 12 items
+/Users/shane/.cache/mise  # 45KB, 2 items
+/Users/shane/.cargo/registry/cache/index.crates.io-1949cf8c6b5b557f  # 7.0MB
+/Users/shane/Library/Caches/org.swift.swiftpm  # 119KB, 2 items
+/Users/shane/Library/Caches/SentryCrash  # 37KB, 9 items
+/Users/shane/Library/Logs/CoreSimulator/CoreSimulator.log  # 6KB
+/Users/shane/Library/Caches/com.apple.dt.Xcode  # 632KB, 4 items
+/Users/shane/Library/Application Support/Code/logs  # 627KB, 7 items
+/Users/shane/Library/Application Support/Code/Cache  # 23.8MB, 2 items
+/Users/shane/Library/Application Support/Code/CachedData  # 35.2MB, 3 items
+/Users/shane/Library/Logs/Zed  # 142KB, 2 items
+/Users/shane/Library/Caches/Homebrew  # 9.72GB, 318 items
+
+=== Applications ===
+/Users/shane/Library/Caches/com.mitchellh.ghostty  # 222KB, 5 items
+/Users/shane/Library/Caches/com.raycast.macos/urlcache  # 7.2MB, 4 items
+/Users/shane/Library/Caches/com.raycast.macos/fsCachedData  # 4.1MB, 6 items
+
+=== Virtualization ===
+
+=== Application Support ===
+
+=== App leftovers ===
+
+=== Apple Silicon updates ===
+
+=== Device backups & firmware ===
+
+=== Time Machine ===
+
+=== Large files ===
+
+=== System Data clues ===
+
+=== Project artifacts ===
+
+# ============================================
+# Summary
+# ============================================
+# Potential cleanup: 23.53GB
+# Items: 858
+# Categories: 44

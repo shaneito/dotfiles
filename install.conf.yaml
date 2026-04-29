@@ -1,0 +1,35 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.config/bat:
+    ~/.config/broot:
+    ~/.config/gh:
+    ~/.config/ghostty:
+    ~/.config/git:
+    ~/.config/kanata:
+    ~/.config/karabiner:
+    ~/.config/kitty:
+    ~/.config/mise:
+    ~/.config/mole:
+    ~/.config/mutt:
+    ~/.config/nvim-vscode:
+    ~/.config/starship:
+    ~/.config/tmux/tmux.conf: tmux/tmux.conf
+    ~/.config/zed:
+    ~/.config/zsh-abbr:
+    ~/.config/zsh/.zshrc: zsh/zshrc
+    ~/.zshenv: zsh/zshenv
+        
+
+- create:
+    - ~/.config/zsh
+    - ~/.config/nvim
+    - ~/.config/tmux
+    - ~/.config/zsh
+
+- shell:
+    - echo "Operation complete"

@@ -1,0 +1,5 @@
+abbr -g "git m"="git commit -m \"%\""
+abbr "brod"="brew outdated"
+abbr "brud"="brew update"
+abbr "brug"="brew upgrade"
+abbr "m"="git commit -m \"%\""
