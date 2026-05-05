@@ -19,7 +19,7 @@
     ~/.config/nvim-vscode:
     ~/.config/starship:
     ~/.config/tmux/tmux.conf: tmux/tmux.conf
-    ~/.config/zed:
+    ~/.config/zed/settings.json: zed/settings.json
     ~/.config/zsh-abbr:
     ~/.config/zsh/.zshrc: zsh/zshrc
     ~/.zshenv: zsh/zshenv
