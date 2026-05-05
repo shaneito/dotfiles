@@ -16,6 +16,7 @@
     ~/.config/mise:
     ~/.config/mole:
     ~/.config/mutt:
+    ~/.config/nvim:
     ~/.config/nvim-vscode:
     ~/.config/starship:
     ~/.config/tmux/tmux.conf: tmux/tmux.conf
