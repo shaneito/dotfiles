@@ -1,6 +1,6 @@
 #!/bin/bash
 
-theme = "nord"
+theme = "gruvbox material dark"
 macos-option-as-alt = left
 window-decoration = true
 macos-titlebar-style = hidden
