@@ -2,4 +2,3 @@ set use_from
 set from="Shane Patel <shane.patel@me.com>"
 set envelope_from=yes
 set sendmail="/usr/sbin/sendmail -oem -oi"
-
