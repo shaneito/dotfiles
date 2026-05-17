@@ -37,6 +37,7 @@ eval "$(fasder --init auto aliases)"
 
 # Starship
 #==========
+export STARSHIP_CONFIG="$DOTFILES/starship/starship.toml"
 source ~/.local/share/zsh/plugins/starship/starship.zsh
 initialize_starship
 

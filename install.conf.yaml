@@ -8,6 +8,7 @@
     ~/.config/bat:
     ~/.config/broot:
     ~/.config/fish:
+    ~/.config/env:
     ~/.config/gh:
     ~/.config/ghostty:
     ~/.config/git:

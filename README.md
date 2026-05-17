@@ -15,7 +15,9 @@
 - Mise
 - Mole
 - Mutt
+- Nvim
 - Nvim-vscode
+- Scripts
 - Starship
 - Tmux
 - Zed
@@ -23,13 +25,9 @@
 - Zsh-abbr
 
 
-## Excludes: 
+## Excludes:
 
-- Neovim (nvim)
 - Yabai
 - Skhd
 - SketchBar
 - Hammerspoon
-
-
-
