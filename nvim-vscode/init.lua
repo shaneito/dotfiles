@@ -11,7 +11,7 @@ vim.opt.wrap = true
 vim.opt.breakindent = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
-vim.opt.expandtab = false
+vim.opt.expandtab = true
 
 -- ========================================================================== --
 -- ==                             KEYBINDINGS                              == --
@@ -20,63 +20,41 @@ vim.opt.expandtab = false
 -- Space as leader key
 vim.g.mapleader = " "
 
-vim.keymap.set("i", "jj", "<ESC>", { desc = "Exit insert mode with jk" })
+-- VsCode
+-- Toggle explorer pane with <leader>e
+vim.keymap.set('n', '<leader>e', function()
+  vim.fn.VSCodeCall('workbench.action.toggleSidebarVisibility')
+end, { noremap = true, silent = true })
+
+-- Toggle terminal with <leader>t
+vim.keymap.set('n', '<leader>t', function()
+  vim.fn.VSCodeCall('workbench.action.togglePanel')
+end, { noremap = true, silent = true })
+
+-- Navigate tabs like Vim
+vim.keymap.set('n', 'gt', function()
+  vim.fn.VSCodeCall('workbench.action.nextEditor')
+end, { noremap = true, silent = true })
+
+vim.keymap.set('n', 'gT', function()
+  vim.fn.VSCodeCall('workbench.action.previousEditor')
+end, { noremap = true, silent = true })
 
 -- Shortcuts
 vim.keymap.set({ "n", "x", "o" }, "<leader>h", "^")
 vim.keymap.set({ "n", "x", "o" }, "<leader>l", "g_")
 vim.keymap.set("n", "<leader>a", ":keepjumps normal! ggVG<cr>")
 
--- Basic clipboard interaction
+-- Basic system clipboard interaction
 vim.keymap.set({ "n", "x" }, "gy", '"+y') -- copy
 vim.keymap.set({ "n", "x" }, "gp", '"+p') -- paste
 
--- Delete text
+-- Delete text but don't polute register with minor deletions
 vim.keymap.set({ "n", "x" }, "x", '"_x')
 vim.keymap.set({ "n", "x" }, "X", '"_d')
 
 -- Commands
 vim.keymap.set("n", "<leader>w", "<cmd>write<cr>")
-vim.keymap.set("n", "<leader>bq", "<cmd>bdelete<cr>")
-vim.keymap.set("n", "<leader>bl", "<cmd>buffer #<cr>")
-
--- place this in one of your configuration file(s)
--- local hop = require('hop')
--- local directions = require('hop.hint').HintDirection
--- vim.keymap.set('', 'f', function()
---   hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true })
--- end, {remap=true})
--- vim.keymap.set('', 'F', function()
---   hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true })
--- end, {remap=true})
--- vim.keymap.set('', 't', function()
---   hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })
--- end, {remap=true})
--- vim.keymap.set('', 'T', function()
---   hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
--- end, {remap=true})
-
--- ========================================================================== --
--- ==                               COMMANDS                               == --
--- ========================================================================== --
-
-vim.api.nvim_create_user_command("ReloadConfig", "source $MYVIMRC", {})
-
-local group = vim.api.nvim_create_augroup("user_cmds", { clear = true })
-
-vim.api.nvim_create_autocmd("TextYankPost", {
-	desc = "Highlight on yank",
-	group = group,
-	callback = function()
-		vim.highlight.on_yank({ higroup = "Visual", timeout = 200 })
-	end,
-})
-
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "help", "man" },
-	group = group,
-	command = "nnoremap <buffer> q <cmd>quit<cr>",
-})
 
 -- ========================================================================== --
 -- ==                               PLUGINS                                == --
@@ -135,15 +113,90 @@ lazy.setup({
 		end,
 	},
 
-	-- {
-	-- 	'smoka7/hop.nvim',
-	-- 	version = '*',
-	-- 	opts = {
-	-- 		keys = 'etovxqpdygfblzhckisuran'
-	-- 	}
-	-- },
-})
+	{
+		"smoka7/hop.nvim",
+		version = "*",
+		opts = {
+			keys = "etovxqpdygfblzhckisuran",
+		},
+		-- config = function()
+		-- local hop = require('hop')
+		-- local directions = require('hop.hint').HintDirection  -- AND THIS
 
--- ========================================================================== --
--- ==                         PLUGIN CONFIGURATION                         == --
--- ========================================================================== --
+		--     hop.setup({ keys = 'etovxqpdygfblzhckisuran' })
+
+		--     vim.keymap.set('', 'f', function()
+		--         hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = false })
+		--     end, { remap = true })
+		-- 		vim.keymmap.set('', 'F', function()
+
+		-- 		hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = false })
+		-- 		end, {remap=true})
+
+		-- 		vim.keymap.set('', 't', function()
+		-- 	  hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = false, hint_offset = -1 })
+		-- 		end, {remap=true})
+
+		-- 		vim.keymap.set('', 'T', function()
+		-- 		hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = false, hint_offset = 1 })
+		-- 		end, {remap=true})
+		-- end
+	},
+	{
+		"folke/flash.nvim",
+		event = "VeryLazy",
+		---@type Flash.Config
+		opts = {
+			modes = {
+				search = {
+					enabled = true,
+				},
+				char = {
+					jump_labels = true,
+				},
+			},
+		},
+		keys = {
+			{
+				"<leader>s",
+				mode = { "n", "x", "o" },
+				function()
+					require("flash").jump()
+				end,
+				desc = "Flash",
+			},
+			{
+				"<leader>S",
+				mode = { "n", "x", "o" },
+				function()
+					require("flash").treesitter()
+				end,
+				desc = "Flash Treesitter",
+			},
+			{
+				"<leader>r",
+				mode = "o",
+				function()
+					require("flash").remote()
+				end,
+				desc = "Remote Flash",
+			},
+			{
+				"<leader>R",
+				mode = { "o", "x" },
+				function()
+					require("flash").treesitter_search()
+				end,
+				desc = "Treesitter Search",
+			},
+			{
+				"<c-s>",
+				mode = { "c" },
+				function()
+					require("flash").toggle()
+				end,
+				desc = "Toggle Flash Search",
+			},
+		},
+	},
+})
