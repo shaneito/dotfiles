@@ -49,10 +49,10 @@ configuration entries.
 )
 
 (deflayer default
-  _   _ _ _ _ _ _ _ _ _ _ _ _
+  _   🔅 🔆 @mc @sls @dtn @dnd ◀◀ ▶⏸ ▶▶ 🔇 🔉 🔊
   _   _ _ _ _ _ _ _ _ _ _ _ _ _
   _   _ _ _ _ _ _ _ _ _ _ _ _ _
-  @cap _ _ _ _ _ _ _ _ _ _ _ _ 
+  @cap _ _ _ _ _ _ _ _ _ _ _ _
   _   _ _ _ _ _ _ _ _ _ _ _ _
   _   _ _ _       @spc     _ _ _ _ _
 )
@@ -61,7 +61,7 @@ configuration entries.
   _ _ _ _ _ _ _ _ _ _ _ _ _
   _ _ _ _ _ _ _ _ _ _ _ _ _ _
   _ _ _ _ _ _ _ _ _ _ _ _ _ _
-  _ _ _ _ _ _ left down up rght _ _ _ 
+  _ _ _ _ _ _ left down up rght _ _ _
   _ _ _ _ _ _ _ _ _ _ _ _ _
   _ _ _ _ _ _ _ _ _ _
 )
@@ -69,4 +69,8 @@ configuration entries.
 (defalias
   cap (tap-hold-press 200 200 esc lctl)
   spc (tap-hold-press 200 200 spc (layer-toggle arrows))
+  mc S-C-up ;; Mission Control
+  sls A-M-spc ;; Spotlight Search
+  dtn S-C-A-M-f5 ;; Dictation
+  dnd S-C-A-M-f6 ;; Do Not Disturb
 )
