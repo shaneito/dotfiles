@@ -27,6 +27,7 @@ PKG="$HOME/.local/pkg"
 
 # ── Node.js / npm ──────────────────────────────────────────
 export NPM_CONFIG_PREFIX="$PKG/node"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export NODE_PATH="$PKG/node/lib/node_modules"
 
 # ── Rust / Cargo ───────────────────────────────────────────
