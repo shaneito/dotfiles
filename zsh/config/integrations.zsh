@@ -94,6 +94,10 @@ ABBR_SET_EXPANSION_CURSOR=1 # enablesexpansion cursor placement represented by '
 #========================
 source /Users/shane/.config/broot/launcher/bash/br
 
+
+# Git-Emoji
+source ~/.local/share/zsh/plugins/git-emoji-logs/git-emoji-logs.zsh
+
 # OLD SETTINGS
 
 ## zsh-completions
