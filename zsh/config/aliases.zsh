@@ -56,3 +56,5 @@ alias grep="grep --color=auto"
 
 alias astro="NVIM_APPNAME=nvim-astro nvim"
 alias vsvim="NVIM_APPNAME=nvim-vscode nvim"
+alias lazy="NVIM_APPNAME=nvim-lazy nvim"
+alias nvchad="NVIM_APPNAME=nvim-nvchad nvim"
