@@ -54,7 +54,7 @@ alias man="batman"
 alias grep="grep --color=auto"
 
 
-alias astro="NVIM_APPNAME=nvim-astro nvim"
-alias vsvim="NVIM_APPNAME=nvim-vscode nvim"
-alias lazy="NVIM_APPNAME=nvim-lazy nvim"
-alias nvchad="NVIM_APPNAME=nvim-nvchad nvim"
+alias via="NVIM_APPNAME=nvim-astro nvim"
+alias viv="NVIM_APPNAME=nvim-vscode nvim"
+alias vil="NVIM_APPNAME=nvim-lazy nvim"
+alias vic="NVIM_APPNAME=nvim-nvchad nvim"
