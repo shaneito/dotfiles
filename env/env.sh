@@ -37,15 +37,17 @@ export RUSTUP_HOME="$PKG/rustup"
 # ── Python / pip ───────────────────────────────────────────
 export PYTHONUSERBASE="$PKG/python" # Use: pip install --user (respects PYTHONUSERBASE automatically)
 
-# ── Rust / Cargo ───────────────────────────────────────────
+# ── Lua / LuaRocks ─────────────────────────────────────────
 export LUA_PATH="$PKG/lua/share/lua/5.4/?.lua;;"
 export LUA_CPATH="$PKG/lua/lib/lua/5.4/?.so;;"
 
-# ── Rust / Cargo ───────────────────────────────────────────
+# ── Perl / Cpan ───────────────────────────────────────────
 export PERL_LOCAL_LIB_ROOT="$PKG/perl"
 export PERL_MB_OPT="--install_base $PKG/perl"
 export PERL_MM_OPT="INSTALL_BASE=$PKG/perl"
 export PERL5LIB="$PKG/perl/lib/perl5"
+export CPANM_HOME="$HOME/.cache/cpanm"
+export CPM_HOME="$HOME/.cache/cpm"
 
 # ── Rust / Cargo ───────────────────────────────────────────
 export GOPATH="$PKG/go"
