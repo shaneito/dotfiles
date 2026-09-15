@@ -13,6 +13,52 @@ function mkcd() {
   mkdir -p "$@" && cd "$_";
 }
 
+# Create a subdirectory and move contents to it
+mksubdir() {
+    emulate -L zsh
+    setopt extended_glob null_glob dot_glob
+
+    local dir=${1:-Project}
+    mkdir -p -- "$dir" || return 1
+
+    local f
+    for f in *(D) .*(D); do
+        [[ $f == . || $f == .. || $f == $dir ]] && continue
+        mv -- "$f" "$dir"/ 2>/dev/null || return 1
+    done
+
+    return 0
+}
+
+flattenUp() {
+    emulate -L zsh
+    setopt extended_glob null_glob dot_glob
+
+    local cur=${PWD:t}
+    local parent=${PWD:h}
+    local f rc=0
+
+    for f in *(D) .*(D); do
+        [[ $f == . || $f == .. ]] && continue
+        if [[ -e "$parent/$f" || -L "$parent/$f" ]]; then
+            print -u2 "flatten_up: conflict in parent: $f"
+            return 1
+        fi
+    done
+
+    for f in *(D) .*(D); do
+        [[ $f == . || $f == .. ]] && continue
+        mv -- "$f" "$parent/" || rc=$?
+        (( rc != 0 )) && return $rc
+    done
+
+    cd -- "$parent" || return 1
+    rmdir -- "$cur" || return 1
+
+    return 0
+}
+
+
 # Compress a directory
 function compress() {
     tar cvzf $1.tar.gz $1
@@ -60,4 +106,59 @@ function switchaero() {
       echo "Invalid selection. Please try again."
     fi
   done
+}
+
+
+#.# Better Git Logs.
+### Using EMOJI-LOG (https://github.com/ahmadawais/Emoji-Log).
+
+# Git Commit, Add all and Push — in one step.
+gcap() {
+    git add . && git commit -m "$*"
+}
+
+# NEW.
+gnew() {
+    gcap "📦 NEW: $@"
+}
+
+# IMPROVE.
+gimp() {
+    gcap "👌 IMPROVE: $@"
+}
+
+# FIX.
+gfix() {
+    gcap "🐛 FIX: $@"
+}
+
+# RELEASE.
+grlz() {
+    gcap "🚀 RELEASE: $@"
+}
+
+# DOC.
+gdoc() {
+    gcap "📖 DOC: $@"
+}
+
+# TEST.
+gtst() {
+    gcap "🤖 TEST: $@"
+}
+
+# BREAKING CHANGE.
+gbrk() {
+    gcap "‼️ BREAKING: $@"
+}
+gtype() {
+NORMAL='\033[0;39m'
+GREEN='\033[0;32m'
+echo "$GREEN gnew$NORMAL — 📦 NEW
+$GREEN gimp$NORMAL — 👌 IMPROVE
+$GREEN gfix$NORMAL — 🐛 FIX
+$GREEN grlz$NORMAL — 🚀 RELEASE
+$GREEN gdoc$NORMAL — 📖 DOC
+$GREEN gtst$NORMAL — 🧪️ TEST
+$GREEN gbrk$NORMAL — ‼️ BREAKING"
 }

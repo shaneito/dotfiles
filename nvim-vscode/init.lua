@@ -22,22 +22,22 @@ vim.g.mapleader = " "
 
 -- VsCode
 -- Toggle explorer pane with <leader>e
-vim.keymap.set('n', '<leader>e', function()
-  vim.fn.VSCodeCall('workbench.action.toggleSidebarVisibility')
+vim.keymap.set("n", "<leader>e", function()
+	vim.fn.VSCodeCall("workbench.action.toggleSidebarVisibility")
 end, { noremap = true, silent = true })
 
 -- Toggle terminal with <leader>t
-vim.keymap.set('n', '<leader>t', function()
-  vim.fn.VSCodeCall('workbench.action.togglePanel')
+vim.keymap.set("n", "<leader>t", function()
+	vim.fn.VSCodeCall("workbench.action.togglePanel")
 end, { noremap = true, silent = true })
 
 -- Navigate tabs like Vim
-vim.keymap.set('n', 'gt', function()
-  vim.fn.VSCodeCall('workbench.action.nextEditor')
+vim.keymap.set("n", "gt", function()
+	vim.fn.VSCodeCall("workbench.action.nextEditor")
 end, { noremap = true, silent = true })
 
-vim.keymap.set('n', 'gT', function()
-  vim.fn.VSCodeCall('workbench.action.previousEditor')
+vim.keymap.set("n", "gT", function()
+	vim.fn.VSCodeCall("workbench.action.previousEditor")
 end, { noremap = true, silent = true })
 
 -- Shortcuts
@@ -161,7 +161,12 @@ lazy.setup({
 				"<leader>s",
 				mode = { "n", "x", "o" },
 				function()
-					require("flash").jump()
+					require("flash").jump({
+            remote_op = {
+              restore = true,
+              motion = true
+            },
+          })
 				end,
 				desc = "Flash",
 			},

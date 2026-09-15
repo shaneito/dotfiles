@@ -1,7 +1,6 @@
 {
     "machine_specific": {
         "krbn-285a7533-e6bb-405a-a912-ed931dede1d0": { "enable_multitouch_extension": true },
-        "krbn-8f3fdef5-626b-4f43-b31f-08442e3c8322": { "enable_multitouch_extension": true },
         "krbn-empty-machine-identifier": { "enable_multitouch_extension": true }
     },
     "profiles": [
