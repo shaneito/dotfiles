@@ -4,6 +4,10 @@
 
 - clean: ["~"]
 
+- create:
+    - ~/.config/zsh
+    - ~/.config/tmux
+
 - link:
     ~/.config/bat:
     ~/.config/broot:
@@ -14,24 +18,17 @@
     ~/.config/git:
     ~/.config/kanata:
     ~/.config/karabiner:
-    ~/.config/kitty:
     ~/.config/mise:
     ~/.config/mole:
     ~/.config/mutt:
-    ~/.config/nvim:
     ~/.config/nvim-vscode:
     ~/.config/starship:
     ~/.config/tmux/tmux.conf: tmux/tmux.conf
-    ~/.config/zed/settings.json: zed/settings.json
+    ~/.config/zed: 
     ~/.config/zsh-abbr:
     ~/.config/zsh/.zshrc: zsh/zshrc
     ~/.zshenv: zsh/zshenv
 
-- create:
-    - ~/.config/zsh
-    - ~/.config/nvim
-    - ~/.config/tmux
-    - ~/.config/zsh
 
 - shell:
     - echo "Operation complete"

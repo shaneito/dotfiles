@@ -1,25 +1,23 @@
 #!/usr/bin/env zsh
+#
+# zshenv — sourced for EVERY zsh invocation (interactive, scripts, GUI apps
+# launched via `open`). Keep this file minimal: only environment variables
+# that something outside an interactive shell might need.
+#
 
-###############################
-#    ENVIRONMENT VARIABLES    #
-###############################
-
-# XDG
+# --- XDG Base Directory spec --------------------------------------------------
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_STATE_HOME="${HOME}/.local/state"
+export XDG_STATE_HOME="$HOME/.local/state"
 
-# Dotfiles
+# --- Dotfiles locations --------------------------------------------------------
 export DOTFILES="$HOME/.dotfiles"
-
-# ZSH
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
-# Other Misc
-export LOCATE_CONFIG="/etc/locate.users.rc" # Locate Command's Database
+# --- Tool-specific config paths ------------------------------------------------
+export LOCATE_CONFIG="/etc/locate.users.rc"                 # `locate` command's database
 export BAT_CONFIG_PATH="$XDG_CONFIG_HOME/bat/bat.conf"
-export KANATA_TRAY_CONFIG_DIR="$XDG_CONFIG_HOME/kanata/kanata-tray.toml"
 
-# Languages
+# --- Per-machine / per-language overrides --------------------------------------
 [ -f "$HOME/.config/env/env.sh" ] && . "$HOME/.config/env/env.sh"

@@ -1,0 +1,11 @@
+# One plugin per line: <github-user>/<repo>
+# Loaded by antidote — see plugins.zsh for how.
+#
+# Order matters for zsh-vi-mode: it needs to load AFTER zsh-autosuggestions and
+# fast-syntax-highlighting so it can see and wrap their keybindings correctly.
+
+Aloxaf/fzf-tab
+zsh-users/zsh-autosuggestions
+olets/zsh-abbr
+zdharma-continuum/fast-syntax-highlighting
+jeffreytse/zsh-vi-mode

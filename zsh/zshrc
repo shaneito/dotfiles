@@ -1,17 +1,21 @@
+#!/usr/bin/env zsh
+#
+# zshrc — sourced for every INTERACTIVE shell. This file only wires up the
+# pieces below in the right order — go edit those files, not this one.
+#
 #                _
 #               | |
 #        _______| |__  _ __ ___
 #       |_  / __| '_ \| '__/ __|
 #      _ / /\__ \ | | | | | (__
 #     (_)___|___/_| |_|_|  \___|
+#
 
-
-
-
-source "${DOTFILES}/zsh/config/aliases.zsh"
-source "${DOTFILES}/zsh/config/integrations.zsh"
-source "${DOTFILES}/zsh/config/functions.zsh"
-source "${DOTFILES}/zsh/config/paths.zsh"
-source "${DOTFILES}/zsh/config/options.zsh"
-
-
+# Order matters: shell behavior → $PATH → external tools → zsh plugins →
+# user-facing aliases/functions (which may rely on any of the above).
+source "${DOTFILES}/zsh/config/options.zsh"     # shell behavior: history, globbing, navigation
+source "${DOTFILES}/zsh/config/paths.zsh"       # $PATH additions
+source "${DOTFILES}/zsh/config/tools.zsh"       # CLI tool integrations (brew, mise, zoxide, fzf, starship...)
+source "${DOTFILES}/zsh/config/plugins.zsh"     # completion system, plugin manager, plugin config
+source "${DOTFILES}/zsh/config/aliases.zsh"     # command aliases
+source "${DOTFILES}/zsh/config/functions.zsh"   # shell functions

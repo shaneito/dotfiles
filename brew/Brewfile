@@ -1,61 +1,37 @@
-tap "asmvik/formulae", trusted: true
-tap "chang-07/tap"
-tap "d12frosted/emacs-plus", trusted: true
-tap "devsunb/tap", trusted: true
-tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae", trusted: true
-tap "nikitabobko/tap", trusted: true
-tap "olets/tap", trusted: true
-tap "timescam/tap", trusted: true
-tap "tw93/tap", trusted: true
-tap "wyne/tap", trusted: true
+tap "buo/cask-upgrade", trusted: true
+tap "wyne/tap"
 # Any-to-PostScript filter
 brew "a2ps"
 # Search tool like grep, but optimized for programmers
 brew "ack"
+# Plugin manager for zsh, inspired by antigen and antibody
+brew "antidote"
 # Arduino command-line interface
 brew "arduino-cli"
-# Improved shell history for zsh, bash, fish and nushell
-brew "atuin"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Bash scripts that integrate bat with various command-line tools
 brew "bat-extras"
-# Yet another cross-platform graphical process/system monitor
-brew "bottom"
 # New way to see and navigate directory trees
 brew "broot"
-# Resource monitor. C++ version and continuation of bashtop and bpytop
-brew "btop"
-# Create and view interactive cheat sheets for *nix commands
-brew "cheat"
 # Human-friendly and fast alternative to cut and (sometimes) awk
 brew "choose-rust"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
-# Get, unpack, build, and install modules from CPAN
-brew "cpanminus"
-# Fast CPAN module installer
-brew "cpm"
 # Power of curl, ease of use of httpie
 brew "curlie"
-# Command-line tool for getting & setting the default browser
-brew "defaultbrowser"
 # Tool that bootstraps your dotfiles
 brew "dotbot"
 # Convert text to Postscript, HTML, or RTF, with syntax highlighting
 brew "enscript"
-# Run arbitrary commands when files change
-brew "entr"
 # Modern, maintained replacement for ls
 brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Download assets from a commit, branch, or tag of GitHub repositories
 brew "fetch"
-# Banner-like program prints strings as ASCII art
-brew "figlet"
 # Collection of GNU find, xargs, and locate
 brew "findutils"
 # User-friendly command-line shell for UNIX-like operating systems
@@ -72,62 +48,34 @@ brew "gh"
 brew "ghostscript"
 # Distributed revision control system
 brew "git"
-# Syntax-highlighting pager for git and diff output
-brew "git-delta"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
-# GNU Privacy Guard (OpenPGP)
-brew "gnupg"
 # GNU grep, egrep and fgrep
 brew "grep"
+# Make JSON greppable
+brew "gron"
 # Sharp cut(1) clone
 brew "hck"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Modern alternative to the watch command
 brew "hwatch"
-# Interactive grep
-brew "igrep"
 # Tools and libraries to manipulate images in select formats
 brew "imagemagick"
-# CLI wrapper for basic network utilities on macOS - ip command
-brew "iproute2mac"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# System tray for kanata keyboard remapper
-brew "kanata-tray"
-# Simple terminal UI for git commands
-brew "lazygit"
-# Utility for directing compilation
-brew "make"
 # Mac App Store command-line interface
 brew "mas"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
-# Deep clean and optimize your Mac
-brew "mole"
 # Nice to use pager for humans
 brew "moor"
 # Collection of tools that nobody wrote when UNIX was young
 brew "moreutils"
-# Mongrel of mail user agents (part elm, pine, mush, mh, etc.)
-brew "mutt"
-# NCurses Disk Usage
-brew "ncdu"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# No Nonsense Neovim Client in Rust
-brew "neovide"
-# HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
-brew "nginx"
-# Port scanning utility for large networks
-brew "nmap"
 # Modern shell for the GitHub era
 brew "nushell"
-# OpenBSD freely-licensed SSH connectivity tools
-brew "openssh"
-# Indents and reformats Perl scripts to make them easier to read
-brew "perltidy"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Reattach process (e.g., tmux) to background
@@ -140,60 +88,24 @@ brew "sd"
 brew "starship"
 # Very fast implementation of tldr in Rust
 brew "tealdeer"
-# User interface to the TELNET protocol
-brew "telnet"
 # Terminal multiplexer
 brew "tmux"
 # Plugin manager for tmux
 brew "tpm"
-# User-friendly pager for grep
-brew "vgrep"
-# Executes a program periodically, showing output fullscreen
-brew "watch"
 # Execute commands when watched files change
 brew "watchexec"
 # Internet file retriever
 brew "wget"
 # Allow GNU Readline to be used with arbitrary programs
 brew "with-readline"
-# Generate your Xcode project from a spec file and your folder structure
-brew "xcodegen"
 # Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
-# Shell extension to navigate your filesystem faster
-brew "zoxide"
-# Simple hotkey-daemon for macOS.
-brew "asmvik/formulae/skhd"
-# A tiling window manager for macOS based on binary space partitioning.
-brew "asmvik/formulae/yabai"
-# GNU Emacs text editor
-brew "d12frosted/emacs-plus/emacs-plus@30", args: ["with-xwidgets"]
-# Custom macOS statusbar with shell plugin, interaction and graph support
-brew "felixkratz/formulae/sketchybar"
 # Modern fasd-style quick access to files and directories
-brew "wyne/tap/fasder"
+brew "wyne/tap/fasder", trusted: true
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
-# AeroSpace is an i3-like tiling window manager for macOS
-cask "nikitabobko/tap/aerospace"
-# Image editing and design software
-cask "affinity"
-# Menu bar system monitor
-cask "airstats"
-# Chromium based browser
-cask "arc"
-# Electronics prototyping platform
-cask "arduino-ide"
-# Live wallpaper app
-cask "backdrop"
-# Audio utility
-cask "background-music"
 # App to manage bank accounts in one place
 cask "banktivity"
-# Text, code, and markup editor
-cask "bbedit"
-# Mobile gaming platform
-cask "bluestacks"
 # Scriptable scratchpad for developers
 cask "boop"
 # Desktop client for brain.fm
@@ -206,8 +118,8 @@ cask "claude"
 cask "cotypist"
 # Collect, organise, edit and annotate documents
 cask "devonthink"
-# Collaborative team software
-cask "figma"
+# Web browser
+cask "firefox@developer-edition"
 cask "font-anka-coder"
 cask "font-cascadia-code-nf"
 cask "font-caskaydia-cove-nerd-font"
@@ -228,36 +140,18 @@ cask "font-victor-mono-nerd-font"
 cask "ghostty"
 # Web browser
 cask "google-chrome"
-# Desktop automation application
-cask "hammerspoon"
-# Open-source video transcoder
-cask "handbrake-app"
-# Open source API development ecosystem
-cask "hoppscotch"
-# Free and open-source media player
-cask "iina"
+# Keyboard customiser
+cask "karabiner-elements"
 # Use Vim in input fields and non input fields
 cask "kindavim"
-# GPU-based terminal emulator
-cask "kitty"
 # Productivity tool
 cask "launchbar"
 # Multi-platform web browser
 cask "microsoft-edge"
 # VPN client for secure internet access and private browsing
 cask "nordvpn"
-# Desktop virtualization software
-cask "parallels"
-# Utility to uninstall apps and remove leftover files from old/uninstalled apps
-cask "pearcleaner"
-# Utility to display all characters of a font
-cask "popchar"
-# Gesture-based launcher for apps, text snippets, and scripts
-cask "radial"
-# All-in-one bookmark manager
-cask "raindropio"
-# Fast, keyboard-first Finder replacement
-cask "chang-07/tap/rascal", trusted: true
+# WebKit based web browser
+cask "orion"
 # Control your tools with a few keystrokes
 cask "raycast"
 # JavaScript playground that auto-evaluates as code is typed
@@ -266,86 +160,26 @@ cask "runjs"
 cask "scrolla"
 # Collection of apps available by subscription
 cask "setapp"
-# Online virtualised computer
-cask "shadow"
-# Digital design and prototyping platform
-cask "sketch"
 # Screen capture software
 cask "snagit"
 # Quicklook extension for source files
 cask "syntax-highlight"
-# Terminal-based web browser
-cask "terminal-browser"
 # Convert, filter, sort, and transform text
 cask "textbuddy"
 # Web browser
 cask "thebrowsercompany-dia"
 # Tool to automate the insertion of frequently used text and graphics
 cask "typinator"
-# Configurable document editor that supports Markdown
-cask "typora"
-# Run commands and display their output on the desktop
-cask "ubersicht"
-# Development environment
-cask "vagrant"
 # Open-source code editor
 cask "visual-studio-code"
-# GPU-accelerated cross-platform terminal emulator and multiplexer
-cask "wezterm"
 # Click and more on UI Elements through typing
 cask "wooshy"
 # Multiplayer code editor
 cask "zed"
 mas "1Password for Safari", id: 1569813296
 mas "Bear", id: 1091189122
-mas "Dropover", id: 1355679052
-mas "FolderPlus", id: 6759026641
-mas "Folio PDF Reader and Editor", id: 6760593014
-mas "GarageBand", id: 682658836
-mas "HP", id: 1474276998
-mas "iCircuit", id: 454347770
-mas "iMovie", id: 408981434
-mas "JSON Peep", id: 1458969831
 mas "Kagi for Safari", id: 1622835804
 mas "Kagi News", id: 6748314243
 mas "Labelife", id: 1560922539
 mas "Mela", id: 1568924476
-mas "Numbers", id: 361304891
-mas "Pages", id: 361309726
 mas "Paperman", id: 6761328838
-mas "Save to Raindrop.io", id: 1549370672
-mas "Subscription Day", id: 6743316600
-mas "Subscriptions", id: 1577082754
-mas "Swift Playground", id: 1496833156
-mas "UTM", id: 1538878817
-mas "Video Speed Controller", id: 1588368612
-mas "Xcode", id: 497799835
-vscode "alefragnani.project-manager"
-vscode "andreilucaci.everforest-pro"
-vscode "arcticicestudio.nord-visual-studio-code"
-vscode "asvetliakov.vscode-neovim"
-vscode "catppuccin.catppuccin-vsc"
-vscode "catppuccin.catppuccin-vsc-icons"
-vscode "codezombiech.gitignore"
-vscode "eamodio.gitlens"
-vscode "esbenp.prettier-vscode"
-vscode "exodiusstudios.comment-anchors"
-vscode "formulahendry.code-runner"
-vscode "geddski.macros"
-vscode "igorsbitnev.error-gutters"
-vscode "jdinhlife.gruvbox"
-vscode "jonathanharty.gruvbox-material-icon-theme"
-vscode "juraj-of-sweden.vscode-foldmore"
-vscode "lior-chamla.google-fonts"
-vscode "naumovs.color-highlight"
-vscode "patbenatar.advanced-new-file"
-vscode "pdconsec.vscode-print"
-vscode "sidneys1.gitconfig"
-vscode "sleistner.vscode-fileutils"
-vscode "tamasfe.even-better-toml"
-vscode "usernamehw.errorlens"
-vscode "yandeu.five-server"
-vscode "yusifaliyevpro.vscicons"
-npm "corepack"
-npm "neovim"
-npm "tree-sitter-cli"
