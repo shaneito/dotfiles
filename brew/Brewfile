@@ -116,8 +116,6 @@ cask "claude"
 cask "cotypist"
 # Collect, organise, edit and annotate documents
 cask "devonthink"
-# Web browser
-cask "firefox@developer-edition"
 cask "font-anka-coder"
 cask "font-cascadia-code-nf"
 cask "font-caskaydia-cove-nerd-font"
@@ -142,8 +140,6 @@ cask "google-chrome"
 cask "kindavim"
 # Productivity tool
 cask "launchbar"
-# Multi-platform web browser
-cask "microsoft-edge"
 # VPN client for secure internet access and private browsing
 cask "nordvpn"
 # WebKit based web browser
