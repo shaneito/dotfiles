@@ -2,3 +2,4 @@ lazy-lock.json
 .DS_Store
 zed/prompts/*.mdb-lock
 zed/prompts/prompts-library-db.0.mdb/lock.mdb
+karabiner/automatic_backups/*.json
