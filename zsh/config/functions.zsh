@@ -52,6 +52,37 @@ flattenUp() {
   rmdir -- "$cur" || return 1
 }
 
+
+vd() {
+    local query selection
+    query="$*"
+
+    selection=$(
+        fd --hidden --type file --type directory . "$HOME/.dotfiles" 2>/dev/null \
+        | fzf --query "$query"
+    ) || return
+
+    nvim "$selection"
+}
+
+#@ GIT ---------------------------------------------------------------
+gco() {
+  local branch
+  branch=$(git branch --all | grep -v HEAD | sed 's/^[* ]*//' | sed 's#remotes/origin/##' | sort -u | fzf --height 40% --reverse)
+  if [ -n "$branch" ]; then
+    git checkout "$branch"
+  fi
+}
+
+gcc() {
+  local commit
+  commit=$(git log --oneline --color=always --graph | \
+    fzf --ansi --reverse --height 60% \
+        --preview 'git show --color=always {2}' \
+        --preview-window right:60%) &&
+  git checkout "$(echo "$commit" | grep -o '[a-f0-9]\{7,\}' | head -1)"
+}
+
 # --- File & app helpers ---------------------------------------------------------------
 
 # Compress a directory into a .tar.gz.

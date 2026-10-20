@@ -1,5 +1,5 @@
 tap "buo/cask-upgrade", trusted: true
-tap "wyne/tap"
+tap "d12frosted/emacs-plus", trusted: true
 # Any-to-PostScript filter
 brew "a2ps"
 # Search tool like grep, but optimized for programmers
@@ -54,6 +54,8 @@ brew "gnu-sed"
 brew "grep"
 # Make JSON greppable
 brew "gron"
+# Tool for glamorous shell scripts
+brew "gum"
 # Sharp cut(1) clone
 brew "hck"
 # User-friendly cURL replacement (command-line HTTP client)
@@ -64,10 +66,16 @@ brew "hwatch"
 brew "imagemagick"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Package manager for the Lua programming language
+brew "luarocks"
 # Mac App Store command-line interface
 brew "mas"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
+# Deep clean and optimize your Mac
+brew "mole"
 # Nice to use pager for humans
 brew "moor"
 # Collection of tools that nobody wrote when UNIX was young
@@ -86,22 +94,30 @@ brew "ripgrep"
 brew "sd"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Modern and pretty fancy file manager for the terminal
+brew "superfile"
 # Very fast implementation of tldr in Rust
 brew "tealdeer"
 # Terminal multiplexer
 brew "tmux"
 # Plugin manager for tmux
 brew "tpm"
+# Parser generator tool
+brew "tree-sitter-cli"
 # Execute commands when watched files change
 brew "watchexec"
 # Internet file retriever
 brew "wget"
 # Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
-# Modern fasd-style quick access to files and directories
-brew "wyne/tap/fasder", trusted: true
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
+# GNU Emacs text editor
+brew "d12frosted/emacs-plus/emacs-plus@31"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Live wallpaper app
+cask "backdrop"
 # App to manage bank accounts in one place
 cask "banktivity"
 # Scriptable scratchpad for developers
@@ -112,6 +128,8 @@ cask "brainfm"
 cask "brave-browser"
 # Anthropic's official Claude AI desktop app
 cask "claude"
+# Multi-language programming editor
+cask "coderunner"
 # System-wide AI autocomplete
 cask "cotypist"
 # Collect, organise, edit and annotate documents
@@ -122,6 +140,7 @@ cask "font-caskaydia-cove-nerd-font"
 cask "font-fira-code-nerd-font"
 cask "font-hack-nerd-font"
 cask "font-hasklug-nerd-font"
+cask "font-inter"
 cask "font-iosevka-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-maple-mono-nf"
@@ -136,6 +155,12 @@ cask "font-victor-mono-nerd-font"
 cask "ghostty"
 # Web browser
 cask "google-chrome"
+# Desktop automation application
+cask "hammerspoon"
+# Chromium-based web browser
+cask "helium-browser"
+# Homebrew's official GUI
+cask "homebrew-app"
 # Use Vim in input fields and non input fields
 cask "kindavim"
 # Productivity tool
@@ -144,6 +169,8 @@ cask "launchbar"
 cask "nordvpn"
 # WebKit based web browser
 cask "orion"
+# Desktop virtualization software
+cask "parallels"
 # Control your tools with a few keystrokes
 cask "raycast"
 # JavaScript playground that auto-evaluates as code is typed
@@ -156,6 +183,8 @@ cask "setapp"
 cask "snagit"
 # Quicklook extension for source files
 cask "syntax-highlight"
+# Terminal-based web browser
+cask "terminal-browser"
 # Convert, filter, sort, and transform text
 cask "textbuddy"
 # Web browser
@@ -171,7 +200,11 @@ cask "zed"
 mas "1Password for Safari", id: 1569813296
 mas "Bear", id: 1091189122
 mas "CotEditor", id: 1024640650
+mas "Flairy", id: 6785116899
+mas "FolderPlus", id: 6759026641
 mas "Kagi for Safari", id: 1622835804
+mas "Keeby", id: 6760791739
 mas "Labelife", id: 1560922539
 mas "Mela", id: 1568924476
 mas "Paperman", id: 6761328838
+mas "Wipr", id: 1662217862

@@ -1,0 +1,15 @@
+;;; early-init.el -*- lexical-binding: t; -*-
+(add-to-list 'default-frame-alist '(undecorated . t))
+(setq frame-resize-pixelwise t)
+
+
+;; Hide the scroll bar
+(push '(vertical-scroll-bars . nil) default-frame-alist)
+;; Padding between the frame edge and the text (pixels)
+(push '(internal-border-width . 16) default-frame-alist)
+;; Set Theme
+(load-theme 'catppuccin :no-confirm)
+
+
+;; Default font: MonoLisa 16pt, set before the first frame to avoid a resize flash
+(push '(font . "MonoLisa-16") default-frame-alist)

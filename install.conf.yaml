@@ -11,19 +11,26 @@
 - link:
     ~/.config/bat:
     ~/.config/broot:
-    ~/.config/fish:
+    ~/.config/emacs:
+    ~/.config/emacs-plus:
     ~/.config/env:
+    ~/.config/fish:
     ~/.config/gh:
     ~/.config/ghostty:
     ~/.config/git:
+    ~/.config/homebrew:
     ~/.config/kanata:
     ~/.config/karabiner:
+    ~/.config/lazygit:
     ~/.config/mise:
     ~/.config/mole:
     ~/.config/mutt:
+    ~/.config/nvim:
     ~/.config/nvim-vscode:
     ~/.config/starship:
+    ~/.config/superfile:
     ~/.config/tmux/tmux.conf: tmux/tmux.conf
+    ~/.config/yazi:
     ~/.config/zed: 
     ~/.config/zsh-abbr:
     ~/.config/zsh/.zshrc: zsh/zshrc

@@ -20,4 +20,4 @@ export LOCATE_CONFIG="/etc/locate.users.rc"                 # `locate` command's
 export BAT_CONFIG_PATH="$XDG_CONFIG_HOME/bat/bat.conf"
 
 # --- Per-machine / per-language overrides --------------------------------------
-[ -f "$HOME/.config/env/env.sh" ] && . "$HOME/.config/env/env.sh"
+[ -f "$XDG_CONFIG_HOME/env/env.sh" ] && . "$XDG_CONFIG_HOME/env/env.sh"

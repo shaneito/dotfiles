@@ -13,9 +13,14 @@ export VIMCONFIG="$XDG_CONFIG_HOME/nvim"
 export HOMEBREW_CASK_OPTS="--no-quarantine --no-binaries"
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/brew/Brewfile"
 export HOMEBREW_NO_ENV_HINTS=1
+# Have homebrew load on non interactive shells as this is sourced by zshenv
+eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 
 # App Settings
 
+# --- Arduino ---------------------------
+export ARDUINO_DIRECTORIES_USER="$HOME/Developer/Arduino"
+export ARDUINO_CONFIG_FILE="$XDG_CONFIG_HOME/arduino/arduino"
 
 
 #########################################
@@ -24,6 +29,7 @@ export HOMEBREW_NO_ENV_HINTS=1
 # Ordered roughly by how much you actually use each one, so the ones you
 # touch daily are easiest to find (and win $PATH priority — see the bottom
 # of this file).
+
 
 # Polyglot package root — reuses $XDG_DATA_HOME (~/.local/share) rather than
 # inventing a separate ~/.local/pkg tree, since that's already the standard
@@ -35,6 +41,7 @@ PKG="$XDG_DATA_HOME"
 # ── Node.js / npm — primary daily language ──────────────────
 export NPM_CONFIG_PREFIX="$PKG/node"           # where `npm install -g` puts things
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export MISE_NODE_DEFAULT_PACKAGES_FILE="$XDG_CONFIG_HOME/npm/default-packages"
 # NODE_PATH intentionally NOT set: it's a legacy escape hatch for module
 # resolution outside a project's own node_modules, and modern Node/npm
 # (and tools like webpack/vite/jest) don't expect it — leaving it set can
@@ -46,11 +53,12 @@ export PERL_LOCAL_LIB_ROOT="$PKG/perl"
 export PERL_MB_OPT="--install_base $PKG/perl"
 export PERL_MM_OPT="INSTALL_BASE=$PKG/perl"
 export PERL5LIB="$PKG/perl/lib/perl5"
-export CPANM_HOME="$HOME/.cache/cpanm"
-export CPM_HOME="$HOME/.cache/cpm"
+export CPANM_HOME="$XDG_CACHE_HOME/cpanm"
+export CPM_HOME="$XDG_CACHE_HOME/cpm"
 
 # ── Python / pip — occasional use ────────────────────────────
 export PYTHONUSERBASE="$PKG/python" # Use: pip install --user (respects PYTHONUSERBASE automatically)
+export MISE_PYTHON_DEFAULT_PACKAGES_FILE="$XDG_CONFIG_HOME/python/default-packages"
 
 # ── C — occasional use ────────────────────────────────────────
 # No env vars needed yet — Xcode Command Line Tools / Homebrew's toolchain
@@ -71,6 +79,11 @@ export GOPATH="$PKG/go"
 # PATH additions — guard against duplicate entries.
 # Called least-used-first, most-used-last: each _prepend_path call wins
 # priority over the ones before it, so Node ends up searched first.
+# mise shims — added here (before the block below) so your own
+# language bin dirs, incl. the self-updated npm, win priority over them
+
+export PATH="${XDG_DATA_HOME}/mise/shims:${PATH}"
+
 _prepend_path() {
     case ":$PATH:" in
         *":$1:"*) ;;          # already present, skip

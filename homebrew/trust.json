@@ -1,0 +1,6 @@
+{
+  "trustedtaps": [
+    "buo/cask-upgrade",
+    "d12frosted/emacs-plus"
+  ]
+}

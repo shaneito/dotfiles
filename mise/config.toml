@@ -1,4 +1,4 @@
 [tools]
-node = "lts"
+node = "latest"
 python = "latest"
 rust = "latest"
