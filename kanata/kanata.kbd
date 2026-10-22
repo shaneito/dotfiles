@@ -6,7 +6,6 @@
   macos-dev-names-include (
     "Apple Internal Keyboard / Trackpad"
     "Keychron K3"
-    "Karabiner DriverKit VirtualHIDKeyboard 1.8.0"
   )
 )
 
