@@ -45,7 +45,7 @@
 )
 
 (deflayer fn-keys
-  _      🔅   🔆    @mc  @sls @dtn @dnd ◀◀   ▶⏸   ▶▶   🔇   🔉    🔊
+  _      brdn   brup    mctl    sls   dtn  dnd prev   pp   next  mute   vold  volu
   _      _    _    _    _    _    _    _    _    _    _    _    _    _
   _      _    _    _    _    _    _    _    _    _    _    _    _    _
   _      _    _    _    _    _    _    _    _    _    _    _    _
@@ -54,11 +54,7 @@
 )
 
 (defalias
-  cap (tap-hold-press 200 200 esc lctl)
-  spc (tap-hold-press 200 200 spc (layer-toggle arrows))
+  cap (tap-hold-press $tap-time $hold-time esc lctl)
+  spc (tap-hold-release $tap-time $hold-time spc (layer-while-held arrows))
   fnl (layer-while-held fn-keys)
-  mc S-C-up ;; Mission Control
-  sls A-M-spc ;; Spotlight Search
-  dtn S-C-A-M-f5 ;; Dictation
-  dnd S-C-A-M-f6 ;; Do Not Disturb
 )

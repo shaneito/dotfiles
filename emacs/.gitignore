@@ -1,0 +1,9 @@
+elpa/
+elpa-cache/
+auto-save-list/
+transient/
+tree-sitter/
+custom.el
+history
+recentf
+places

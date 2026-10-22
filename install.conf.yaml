@@ -11,6 +11,7 @@
 - link:
     ~/.config/bat:
     ~/.config/broot:
+    ~/.config/doom:
     ~/.config/emacs:
     ~/.config/emacs-plus:
     ~/.config/env:
@@ -18,6 +19,7 @@
     ~/.config/gh:
     ~/.config/ghostty:
     ~/.config/git:
+    ~/.config/hammerspoon:
     ~/.config/homebrew:
     ~/.config/kanata:
     ~/.config/karabiner:
@@ -31,7 +33,7 @@
     ~/.config/superfile:
     ~/.config/tmux/tmux.conf: tmux/tmux.conf
     ~/.config/yazi:
-    ~/.config/zed: 
+    ~/.config/zed:
     ~/.config/zsh-abbr:
     ~/.config/zsh/.zshrc: zsh/zshrc
     ~/.zshenv: zsh/zshenv

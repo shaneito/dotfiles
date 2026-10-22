@@ -6,7 +6,7 @@
 alias ll='eza -laF --git --ignore-glob=".CFUserTextEncoding|.DS_Store"'
 alias ls='eza -a --grid --ignore-glob=".CFUserTextEncoding|.DS_Store"'
 alias lt='eza --tree'
-alias icloud="$HOME/Library/Mobile\ Documents/com~apple~CloudDocs"
+alias icloud="cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs"
 alias trail="<<<${(F)path}"      # print $PATH, one entry per line
 alias ftrail="<<<${(F)fpath}"    # print $fpath, one entry per line
 
